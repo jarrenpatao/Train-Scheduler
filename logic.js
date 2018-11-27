@@ -58,4 +58,7 @@ database.ref().on("child_added", function(childSnapshot) {
 
   $("#train-table > tbody").append(newRow);
 
+}, function(errorObject) {
+  console.log("Errors handled: " + errorObject.code);
 });
+
